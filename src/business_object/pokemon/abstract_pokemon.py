@@ -3,7 +3,7 @@ import copy
 from business_object.statistic import Statistic
 
 
-abstract class AbstractPokemon:
+class AbstractPokemon:
     """
     A Pokemon
     """
@@ -25,10 +25,10 @@ abstract class AbstractPokemon:
     # -------------------------------------------------------------------------
     # Methods
     # -------------------------------------------------------------------------
+    @abstractmethod
+    def get_pokemon_attack_coef(self) -> float:
+        pass
 
-    abstract public function get_pokemon_attack_coef()
-
-    #def get_pokemon_attack_coef(self) -> float:
     #    """
     #    Compute a damage multiplier related to the pokemon type.
     #

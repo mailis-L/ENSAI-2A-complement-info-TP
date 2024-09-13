@@ -5,13 +5,13 @@ from business_object.statistic import Statistic
 class TestAttackerPokemon:
     def test_get_coef_damage_type(self):
         # GIVEN
-        snorlax = AttackerPokemon(stat_current=Statistic(attack=100, defense=100))
+        snorlax = Attacker(stat_current=Statistic(attack=100, defense=100))
 
         # WHEN
         multiplier = snorlax.get_pokemon_attack_coef()
 
         # THEN
-        assert multiplier == 2
+        assert multiplier == 1.5
 
 
 if __name__ == "__main__":

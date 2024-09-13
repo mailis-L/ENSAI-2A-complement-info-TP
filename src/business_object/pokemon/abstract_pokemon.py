@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from business_object.statistic import Statistic
 
 
-class AbstractPokemon:
+class AbstractPokemon(ABC):
     """
     A Pokemon
     """
@@ -13,11 +13,10 @@ class AbstractPokemon:
     # Constructor
     # -------------------------------------------------------------------------
 
-    def __init__(self, stat_max=None, stat_current=None, level=0, name=None, type_pk=None):
+    def __init__(self, stat_current=None, level=0, name=None, type_pk=None):
         # -----------------------------
         # Attributes
         # -----------------------------
-        self._stat_max: Statistic = stat_max
         self._stat_current: Statistic = stat_current
         self._level: int = level
         self._name: str = name
